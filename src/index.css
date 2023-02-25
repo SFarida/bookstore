@@ -1,0 +1,158 @@
+body {
+  background-color: #f5f6fa;
+
+}
+
+.content {
+ 
+}
+
+.nav_link {
+  text-decoration: none;
+  font-family: 'Montserrat' sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #ccc;
+}
+
+.link-active {
+  color: #121212;
+}
+
+.nav_link:hover {
+  color: #121212;
+}
+
+.list-item{
+  width: 75rem;
+  height: 10.625rem;
+  margin: 2.313rem 6.25rem 0;
+  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  list-style: none;
+}
+
+.list-item:hover{
+  background-color: #f5f6fa;
+}
+
+.School-of {
+  opacity: 0.5;
+  font-family: 'Montserrat' sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  font-family: 'RobotoSlab' sans-serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author{
+  font-family: 'RobotoSlab' sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.list-item li{
+  font-family: 'RobotoSlab' sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.Current-Chapter {
+  opacity: 0.5;
+  font-family: 'RobotoSlab' sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.Current-Lesson {
+  font-family: 'RobotoSlab' sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.new_book{
+  font-family: 'Montserrat' sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+input::placeholder{
+  font-family: 'Montserrat' sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
+
+.input_book{
+  height: 2.813rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: #fff;
+}
+
+.select{
+  border-radius: 4px;
+  height: 2.813rem;
+  border: solid 1px var(--white);
+  background-color: #fff;
+}
+
+.select_option{
+  font-family: 'Montserrat' sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #c4c4c4;
+}
