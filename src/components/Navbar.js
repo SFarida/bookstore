@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
-import styles from '../styles/Navbar.module.scss'
+import { NavLink } from 'react-router-dom';
+import styles from '../styles/Navbar.module.scss';
 
 const Navbar = () => (
   <header className={styles.nav}>
@@ -10,7 +10,7 @@ const Navbar = () => (
           <li className="list-group-item px-2">
             <NavLink
               className={({ isActive }) => (isActive ? 'link-active nav_link' : 'nav_link')}
-              to="/books"
+              to="/"
             >
               Books
             </NavLink>
@@ -26,7 +26,10 @@ const Navbar = () => (
         </ul>
       </div>
       <div>
-        <NavLink to="/"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></NavLink>
+        <NavLink to="/">
+          {' '}
+          <i className="fa fa-user-circle-o" aria-hidden="true" />
+        </NavLink>
       </div>
     </nav>
   </header>
