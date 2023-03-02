@@ -1,33 +1,10 @@
+import { useSelector } from 'react-redux';
+import { selectAllBooks } from '../redux/books/booksSlice';
 import Book from './Book';
 import Form from './Form';
 
 const Books = () => {
-  const books = [
-    {
-      id: 1,
-      title: 'The Hunger Games',
-      category: 'Action',
-      author: 'Suzanne Collins',
-      chapter: 'Chapter 17',
-      progress: 64,
-    },
-    {
-      id: 2,
-      title: 'Dune',
-      category: 'Science Fiction',
-      author: 'Frank Herbert',
-      chapter: 'Chapter 3: *A Lesson Learned',
-      progress: 8,
-    },
-    {
-      id: 3,
-      title: 'Capital in the Twenty-First Century',
-      category: 'Economy',
-      author: 'Suzanne Collins',
-      chapter: 'Introduction',
-      progress: 0,
-    },
-  ];
+  const books = useSelector(selectAllBooks);
 
   return (
     <div className="">

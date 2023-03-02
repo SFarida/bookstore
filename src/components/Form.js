@@ -26,13 +26,12 @@ const Form = ({ books }) => {
           <div className="col-3">
             <select className="w-100 select">
               {
-                                books.map((book) => (
-                                  <option value={book.author} key={book.id} style={optionStyle}>
-                                    {book.author}
-                                  </option>
-                                ))
-                            }
-
+                books.map((book) => (
+                  <option value={book.author} key={book.id} style={optionStyle}>
+                    {book.author}
+                  </option>
+                ))
+              }
             </select>
           </div>
           <div className="col-3">
