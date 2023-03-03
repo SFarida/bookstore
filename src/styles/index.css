@@ -151,3 +151,7 @@ input::placeholder {
   letter-spacing: -0.15px;
   color: #c4c4c4;
 }
+
+button {
+  border: none;
+}
