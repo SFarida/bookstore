@@ -35,7 +35,7 @@ const booksSlice = createSlice({
             itemId: nanoid(),
             title,
             author,
-            category: 'Default category',
+            category: 'Default category.',
           },
         };
       },
