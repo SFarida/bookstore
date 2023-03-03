@@ -5,26 +5,24 @@ import Form from './Form';
 
 const Books = () => {
   const books = useSelector(selectAllBooks);
-
   return (
     <div className="">
       <ul className="ps-0">
         {
                     books.map((book) => (
                       <Book
-                        key={book.id}
+                        key={book.itemId}
                         title={book.title}
                         author={book.author}
                         category={book.category}
-                        chapter={book.chapter}
-                        progress={book.progress}
+                        itemId={book.itemId}
                       />
                     ))
                 }
       </ul>
       <hr className="m-5" />
       <div className="container">
-        <Form books={books} />
+        <Form />
       </div>
     </div>
   );

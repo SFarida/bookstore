@@ -1,50 +1,66 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-const Form = ({ books }) => {
-  const optionStyle = {
-    fontFamily: '"Montserrat", sans-serif',
-    fontSize: '1rem',
-    fontWeight: 'normal',
-    fontStretch: 'normal',
-    fontStyle: 'normal',
-    lineHeight: 'normal',
-    letterSpacing: '-0.15px',
-    color: '#c4c4c4',
+const Form = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const onTitleChange = (e) => setTitle(e.target.value);
+  const onAuthorChange = (e) => setAuthor(e.target.value);
+  const canSave = Boolean(title) && Boolean(author);
+  const onSaveBook = () => {
+    if (title && author) {
+      dispatch(
+        addBook(title, author),
+      );
+      setTitle('');
+      setAuthor('');
+    }
   };
+
   return (
     <div className="container">
       <h3 className="new_book">ADD NEW BOOK</h3>
       <form className="form">
         <div className="row">
-          <div className="col-6">
+          <div className="col-md">
             <input
               className="w-100 input_book"
               placeholder="Book title"
+              type="text"
+              id="title"
+              name="title"
+              value={title}
+              onChange={onTitleChange}
             />
           </div>
-          <div className="col-3">
-            <select className="w-100 select">
-              {
-                books.map((book) => (
-                  <option value={book.author} key={book.id} style={optionStyle}>
-                    {book.author}
-                  </option>
-                ))
-              }
-            </select>
+          <div className="col-md">
+            <input
+              className="w-100 input_book"
+              placeholder="Book Author"
+              type="text"
+              id="author"
+              name="author"
+              value={author}
+              onChange={onAuthorChange}
+            />
           </div>
-          <div className="col-3">
-            <button className="btn btn-primary w-100" type="submit">ADD BOOK</button>
+          <div className="col-md">
+            <button
+              className="btn btn-primary w-100"
+              type="submit"
+              onClick={onSaveBook}
+              disabled={!canSave}
+            >
+              ADD BOOK
+            </button>
           </div>
         </div>
       </form>
     </div>
   );
-};
-
-Form.propTypes = {
-  books: PropTypes.shape([]).isRequired,
 };
 
 export default Form;

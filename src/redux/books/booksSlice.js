@@ -2,28 +2,22 @@ import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = [
   {
-    id: 1,
-    title: 'The Hunger Games',
-    category: 'Action',
-    author: 'Suzanne Collins',
-    chapter: 'Chapter 17',
-    progress: 64,
+    itemId: 'item1',
+    title: 'The Great Gatsby',
+    author: 'John Smith',
+    category: 'Fiction',
   },
   {
-    id: 2,
-    title: 'Dune',
-    category: 'Science Fiction',
-    author: 'Frank Herbert',
-    chapter: 'Chapter 3: *A Lesson Learned',
-    progress: 8,
+    itemId: 'item2',
+    title: 'Anna Karenina',
+    author: 'Leo Tolstoy',
+    category: 'Fiction',
   },
   {
-    id: 3,
-    title: 'Capital in the Twenty-First Century',
-    category: 'Economy',
-    author: 'Suzanne Collins',
-    chapter: 'Introduction',
-    progress: 0,
+    itemId: 'item3',
+    title: 'The Selfish Gene',
+    author: 'Richard Dawkins',
+    category: 'Nonfiction',
   },
 ];
 
@@ -38,16 +32,16 @@ const booksSlice = createSlice({
       prepare(title, author) {
         return {
           payload: {
-            id: nanoid(),
+            itemId: nanoid(),
             title,
             author,
+            category: 'Undefined category',
           },
         };
       },
     },
     removeBook(state, action) {
-      const bookId = action.payload;
-      state.filter((book) => book.id !== bookId);
+      return state.filter((book) => book.itemId !== action.payload);
     },
   },
 });
