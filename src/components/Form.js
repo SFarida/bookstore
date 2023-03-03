@@ -10,14 +10,13 @@ const Form = () => {
   const onTitleChange = (e) => setTitle(e.target.value);
   const onAuthorChange = (e) => setAuthor(e.target.value);
   const canSave = Boolean(title) && Boolean(author);
-  const onSaveBook = () => {
-    if (title && author) {
-      dispatch(
-        addBook(title, author),
-      );
-      setTitle('');
-      setAuthor('');
-    }
+  const onSaveBook = (e) => {
+    e.preventDefault();
+    dispatch(
+      addBook(title, author),
+    );
+    setTitle('');
+    setAuthor('');
   };
 
   return (
