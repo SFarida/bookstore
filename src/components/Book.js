@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook, getBooks } from '../redux/books/booksSlice';
 
 const Book = (
   {
@@ -22,7 +22,15 @@ const Book = (
             </li>
             <li className="list-group-item px-2">|</li>
             <li className="list-group-item px-2">
-              <button type="button" onClick={() => dispatch(removeBook(itemId))}>Remove</button>
+              <button
+                type="button"
+                onClick={async () => {
+                  await dispatch(deleteBook(itemId));
+                  await dispatch(getBooks());
+                }}
+              >
+                Remove
+              </button>
             </li>
             <li className="list-group-item px-2">|</li>
             <li className="list-group-item px-2">

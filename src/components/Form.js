@@ -1,22 +1,44 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { nanoid } from '@reduxjs/toolkit';
+// import { addBook } from '../redux/books/booksSlice';
+import { getBooks, postBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [category, setCategory] = useState('');
+  const categories = [
+    { name: 'Action', id: '1' },
+    { name: 'Classic', id: '2' },
+    { name: 'Crime', id: '3' },
+    { name: 'Fantasy', id: '4' },
+    { name: 'Humour', id: '5' },
+  ];
 
   const onTitleChange = (e) => setTitle(e.target.value);
   const onAuthorChange = (e) => setAuthor(e.target.value);
-  const canSave = Boolean(title) && Boolean(author);
-  const onSaveBook = (e) => {
+  const onCategoryChange = (e) => setCategory(e.target.value);
+  const canSave = Boolean(title) && Boolean(author) && Boolean(category);
+  const onSaveBook = async (e) => {
     e.preventDefault();
-    dispatch(
-      addBook(title, author),
-    );
-    setTitle('');
-    setAuthor('');
+    try {
+      await dispatch(
+        postBook({
+          item_id: nanoid(),
+          title,
+          author,
+          category,
+        }),
+      );
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+      await dispatch(getBooks());
+    } catch (err) {
+      console.error('Failed to save the book', err);
+    }
   };
 
   return (
@@ -34,6 +56,23 @@ const Form = () => {
               value={title}
               onChange={onTitleChange}
             />
+          </div>
+          <div className="col-md">
+            <select
+              className="w-100 select"
+              id="category"
+              name="category"
+              onChange={onCategoryChange}
+            >
+              <option value="">Category</option>
+              {
+                categories.map((category) => (
+                  <option value={category.name} key={category.id}>
+                    {category.name}
+                  </option>
+                ))
+              }
+            </select>
           </div>
           <div className="col-md">
             <input
