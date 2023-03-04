@@ -152,17 +152,33 @@ input::placeholder {
 
 button {
   border: none;
+  background-color: white;
+  color: #4386bf;
 }
 
 .progress {
   border-radius: 50%;
   width: 4.25rem;
   height: 4.25rem;
-  border: 5px solid #0d6efd;
+  border: 5px solid #307bbe;
   border-left-color: #e8e8e8;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-right: 15px;
+}
+
+.azure-btn {
+  background-color: #0290ff !important;
+  color: #e8e8e8 !important;
+}
+
+.progress_div {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.chapter {
+  margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 1199px) {
@@ -177,10 +193,12 @@ button {
 
   .progress_div {
     margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .chapter {
     margin-bottom: 2rem;
+    align-items: center;
   }
 }
 

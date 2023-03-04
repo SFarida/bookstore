@@ -28,7 +28,7 @@ const Navbar = () => (
       <div>
         <NavLink to="/">
           {' '}
-          <i className="fa fa-user-circle-o" aria-hidden="true" />
+          <i className="fa fa-user-circle-o fa-2x" style={{ color: '#0290ff' }} aria-hidden="true" />
         </NavLink>
       </div>
     </nav>

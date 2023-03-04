@@ -86,7 +86,7 @@ const Form = () => {
           </div>
           <div className="col-md m-2">
             <button
-              className="btn btn-primary w-100"
+              className="btn azure-btn w-100"
               type="submit"
               onClick={onSaveBook}
               disabled={!canSave}

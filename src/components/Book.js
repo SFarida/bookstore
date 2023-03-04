@@ -12,18 +12,18 @@ const Book = (
   return (
     <li className="list-item">
       <div className="row">
-        <div className="col-xl-6 book_list">
+        <div className="col-xl-4 book_list">
           <h6 className="School-of">{category}</h6>
           <h3 className="title">{title}</h3>
           <p className="author">{author}</p>
           <ul className="d-flex flex-wrap ps-0">
-            <li className="list-group-item p-2">
-              <button className="btn btn-primary" type="button">Comments</button>
+            <li className="list-group-item pe-2 pt-2 pb-2">
+              <button className="" type="button">Comments</button>
             </li>
             <li className="list-group-item p-2 d-flex align-items-center">|</li>
             <li className="list-group-item p-2">
               <button
-                className="btn btn-outline-primary"
+                className=""
                 type="button"
                 onClick={async () => {
                   await dispatch(deleteBook(itemId));
@@ -35,16 +35,21 @@ const Book = (
             </li>
             <li className="list-group-item p-2 d-flex align-items-center">|</li>
             <li className="list-group-item p-2">
-              <button className="btn btn-primary" type="button">Edit</button>
+              <button className="" type="button">Edit</button>
             </li>
           </ul>
         </div>
-        <div className="col-xl-2 d-flex justify-content-center align-items-center progress_div">
+        <div className="col-xl-4 d-flex flex-wrap justify-content-center align-items-center progress_div">
           <div className="progress">&nbsp;</div>
+          <div className="d-flex flex-column flex-wrap align-items-center">
+            <span className="fs-2">65%</span>
+            <span className="Current-Chapter">Completed</span>
+          </div>
         </div>
-        <div className="col-xl-4 border-start ps-5 d-flex justify-content-center flex-column align-items-center chapter">
+        <div className="col-xl-4 border-start ps-5 d-flex justify-content-center flex-column chapter">
           <p className="Current-Chapter">CURRENT CHAPTER</p>
-          <button type="button" className="btn btn-primary">UPDATE PROGRESS</button>
+          <p className="Current-Lesson">Chapter 17</p>
+          <button type="button" className="btn azure-btn">UPDATE PROGRESS</button>
         </div>
       </div>
     </li>
