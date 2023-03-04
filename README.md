@@ -153,7 +153,7 @@ or if you use css then run this instead of the latter command above
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+<!-- > Describe 1 - 3 features you will add to the project. -->
 
 - [ ] **Add book**
 - [ ] **Delete book**

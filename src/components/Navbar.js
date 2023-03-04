@@ -9,7 +9,7 @@ const Navbar = () => (
         <ul className="d-flex flex-wrap align-items-center">
           <li className="list-group-item px-2">
             <NavLink
-              className={({ isActive }) => (isActive ? 'link-active nav_link' : 'nav_link')}
+              className={({ isActive }) => (isActive ? 'link-active nav_link font_montserrat' : 'nav_link font_montserrat')}
               to="/"
             >
               Books
@@ -17,7 +17,7 @@ const Navbar = () => (
           </li>
           <li className="list-group-item px-2">
             <NavLink
-              className={({ isActive }) => (isActive ? 'link-active nav_link' : 'nav_link')}
+              className={({ isActive }) => (isActive ? 'link-active nav_link font_montserrat' : 'nav_link font_montserrat')}
               to="/categories"
             >
               Categories

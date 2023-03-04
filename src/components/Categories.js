@@ -9,7 +9,7 @@ const Categories = () => {
   };
   return (
     <div className="container">
-      <p className="Current-Chapter">{status}</p>
+      <p className="Current-Chapter font_robotoSlab">{status}</p>
       <button className="btn btn-primary" type="button" onClick={checkBookStatus}>Check status</button>
     </div>
   );

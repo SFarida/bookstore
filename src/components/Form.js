@@ -42,7 +42,7 @@ const Form = () => {
 
   return (
     <div className="container">
-      <h3 className="new_book">ADD NEW BOOK</h3>
+      <h3 className="new_book font">ADD NEW BOOK</h3>
       <form className="form">
         <div className="row">
           <div className="col-md m-2">

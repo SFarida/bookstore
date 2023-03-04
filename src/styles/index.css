@@ -2,14 +2,24 @@ body {
   background-color: #f5f6fa;
 }
 
-.nav_link {
-  text-decoration: none;
+.font_montserrat {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.813rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
+}
+
+.font_robotoSlab {
+  font-family: 'RobotoSlab', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+.nav_link {
+  text-decoration: none;
+  font-size: 0.813rem;
   letter-spacing: 1.9px;
   color: #ccc;
 }
@@ -37,79 +47,49 @@ body {
 
 .School-of {
   opacity: 0.5;
-  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #121212;
 }
 
 .title {
-  font-family: 'RobotoSlab', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
   color: #121212;
 }
 
 .author {
-  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
 }
 
 .list-item li {
-  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #4386bf;
 }
 
 .Current-Chapter {
   opacity: 0.5;
-  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
   color: #121212;
 }
 
 .Current-Lesson {
-  font-family: 'RobotoSlab', sans-serif;
   font-size: 1rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.4px;
   color: #121212;
 }
 
 .new_book {
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
 }
@@ -137,17 +117,6 @@ input::placeholder {
   height: 2.813rem;
   border: solid 1px var(--white);
   background-color: #fff;
-}
-
-.select_option {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.15px;
-  color: #c4c4c4;
 }
 
 button {
@@ -193,7 +162,6 @@ button {
 
   .progress_div {
     margin-bottom: 2rem;
-    font-family: 'Montserrat', sans-serif;
   }
 
   .chapter {
