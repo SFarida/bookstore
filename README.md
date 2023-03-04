@@ -3,7 +3,7 @@
 
 <div align="center">
   <h1><b>Bookstore</b></h1>
-   <!-- <img src="./public/project_screenshot.png" alt="Awesome Meals image" width="100%" /> -->
+   <img src="./public/bookstore.png" alt="Bookstore" width="100%" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
