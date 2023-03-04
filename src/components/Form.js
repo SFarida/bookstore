@@ -45,7 +45,7 @@ const Form = () => {
       <h3 className="new_book">ADD NEW BOOK</h3>
       <form className="form">
         <div className="row">
-          <div className="col-md">
+          <div className="col-md m-2">
             <input
               className="w-100 input_book"
               placeholder="Book title"
@@ -56,7 +56,7 @@ const Form = () => {
               onChange={onTitleChange}
             />
           </div>
-          <div className="col-md">
+          <div className="col-md m-2">
             <select
               className="w-100 select"
               id="category"
@@ -73,7 +73,7 @@ const Form = () => {
               }
             </select>
           </div>
-          <div className="col-md">
+          <div className="col-md m-2">
             <input
               className="w-100 input_book"
               placeholder="Book Author"
@@ -84,7 +84,7 @@ const Form = () => {
               onChange={onAuthorChange}
             />
           </div>
-          <div className="col-md">
+          <div className="col-md m-2">
             <button
               className="btn btn-primary w-100"
               type="submit"

@@ -12,17 +12,18 @@ const Book = (
   return (
     <li className="list-item">
       <div className="row">
-        <div className="col-6">
+        <div className="col-xl-6 book_list">
           <h6 className="School-of">{category}</h6>
           <h3 className="title">{title}</h3>
           <p className="author">{author}</p>
           <ul className="d-flex flex-wrap ps-0">
-            <li className="list-group-item pe-2">
-              <button type="button">Comments</button>
+            <li className="list-group-item p-2">
+              <button className="btn btn-primary" type="button">Comments</button>
             </li>
-            <li className="list-group-item px-2">|</li>
-            <li className="list-group-item px-2">
+            <li className="list-group-item p-2 d-flex align-items-center">|</li>
+            <li className="list-group-item p-2">
               <button
+                className="btn btn-outline-primary"
                 type="button"
                 onClick={async () => {
                   await dispatch(deleteBook(itemId));
@@ -32,13 +33,16 @@ const Book = (
                 Remove
               </button>
             </li>
-            <li className="list-group-item px-2">|</li>
-            <li className="list-group-item px-2">
-              <button type="button">Edit</button>
+            <li className="list-group-item p-2 d-flex align-items-center">|</li>
+            <li className="list-group-item p-2">
+              <button className="btn btn-primary" type="button">Edit</button>
             </li>
           </ul>
         </div>
-        <div className="col-4 border-start ps-5">
+        <div className="col-xl-2 d-flex justify-content-center align-items-center progress_div">
+          <div className="progress">&nbsp;</div>
+        </div>
+        <div className="col-xl-4 border-start ps-5 d-flex justify-content-center flex-column align-items-center chapter">
           <p className="Current-Chapter">CURRENT CHAPTER</p>
           <button type="button" className="btn btn-primary">UPDATE PROGRESS</button>
         </div>
