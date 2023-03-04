@@ -14,9 +14,7 @@ const Books = () => {
   const books = useSelector(selectAllBooks);
   const booksStatus = useSelector(getBooksStatus);
   const error = useSelector(getBooksError);
-  // const { books } = useSelector((store) => store.books);
 
-  console.log('books', books, booksStatus);
   useEffect(() => {
     if (booksStatus === 'idle') {
       dispatch(getBooks());

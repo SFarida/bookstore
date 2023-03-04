@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-// import { addBook } from '../redux/books/booksSlice';
 import { getBooks, postBook } from '../redux/books/booksSlice';
 
 const Form = () => {
