@@ -159,30 +159,33 @@ button {
   width: 4.25rem;
   height: 4.25rem;
   border: 5px solid #0d6efd;
-  border-left-color: #E8E8E8;
+  border-left-color: #e8e8e8;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   margin-right: 15px;
 }
 
 @media screen and (max-width: 1199px) {
-  .book_list{
+  .book_list {
     text-align: center;
     margin-bottom: 2rem;
   }
-  .book_list ul{
+
+  .book_list ul {
     justify-content: center;
   }
-  .progress_div{
+
+  .progress_div {
     margin-bottom: 2rem;
   }
-  .chapter{
+
+  .chapter {
     margin-bottom: 2rem;
   }
 }
 
-@media screen and (max-width: 767px){
-  .list-item{
+@media screen and (max-width: 767px) {
+  .list-item {
     margin: 2.313rem 1.25rem 0;
   }
 }
