@@ -181,7 +181,7 @@ button {
   align-items: flex-start;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 991px) {
   .book_list {
     text-align: center;
     margin-bottom: 2rem;

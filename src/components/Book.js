@@ -12,7 +12,7 @@ const Book = (
   return (
     <li className="list-item">
       <div className="row">
-        <div className="col-xl-4 book_list">
+        <div className="col-lg-4 book_list">
           <h6 className="School-of">{category}</h6>
           <h3 className="title">{title}</h3>
           <p className="author">{author}</p>
@@ -39,14 +39,14 @@ const Book = (
             </li>
           </ul>
         </div>
-        <div className="col-xl-4 d-flex flex-wrap justify-content-center align-items-center progress_div">
+        <div className="col-lg-4 d-flex flex-wrap justify-content-center align-items-center progress_div">
           <div className="progress">&nbsp;</div>
           <div className="d-flex flex-column flex-wrap align-items-center">
             <span className="fs-2">65%</span>
             <span className="Current-Chapter">Completed</span>
           </div>
         </div>
-        <div className="col-xl-4 border-start ps-5 d-flex justify-content-center flex-column chapter">
+        <div className="col-lg-4 border-start ps-5 d-flex justify-content-center flex-column chapter">
           <p className="Current-Chapter">CURRENT CHAPTER</p>
           <p className="Current-Lesson">Chapter 17</p>
           <button type="button" className="btn azure-btn">UPDATE PROGRESS</button>
